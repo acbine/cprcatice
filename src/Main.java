@@ -27,7 +27,7 @@ public class Main {
         System.out.println(bbb);
     }
 
-    public static void main(String[] args){
+    public static void NO4(String[] args){
         // N = 123이면 1 + 2 + 3 = 6을
         int a =123 ;
         int b =4556 ;
@@ -37,12 +37,20 @@ public class Main {
         int result=intStream.sum();
         System.out.println(result);
 //        System.out.println(split[3]);
+    }
 
-
-
-
-
-
+    public static void main(String[] args){
+//        12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28
+        int a =12;
+        int b = 5;
+        int result =0;
+        for (int i=1; i<=b; i++ ){
+            if(b%i == 0){
+                System.out.println(i);
+                result= result+i;
+            }
+        }
+        System.out.println(result);
     }
 
 
