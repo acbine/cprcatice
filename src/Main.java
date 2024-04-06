@@ -66,7 +66,7 @@ public class Main {
         System.out.println(array[0]);
     }
 
-    public static void main(String[] args){
+    public static void NO7(String[] args){
 //      자연수 n이 매개변수로 주어집니다. n을 x로 나눈 나머지가 1이 되도록 하는 가장 작은 자연수 x
         int n = 12;
         for(int i=1; i<=n; i++){
@@ -75,6 +75,29 @@ public class Main {
                 break;
             }
         }
+
+    }
+
+    public static void main(String[] args){
+//      대문자와 소문자가 섞여있는 문자열 s가 주어집니다. s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False
+//        모두 하나도 없는 경우는 항상 True
+        String s="pyY";
+        int pcount = 0;
+        int ycount = 0;
+        boolean answer = true;
+        String ls=s.toLowerCase();
+        String[] split=ls.split(""); // 문자열을 각각의 배열러나누고
+
+        for(int i=0; i<split.length; i++){
+            if(split[i].equals("p")){
+                pcount=pcount+1;
+            }else if(split[i].equals("y")){
+                ycount=ycount+1;
+            }
+        }
+        answer=(pcount==ycount) ? true : false;
+
+
 
     }
 
