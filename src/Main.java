@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.OptionalDouble;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -39,7 +41,7 @@ public class Main {
 //        System.out.println(split[3]);
     }
 
-    public static void main(String[] args){
+    public static void NO5(String[] args){
 //        12의 약수는 1, 2, 3, 4, 6, 12입니다. 이를 모두 더하면 28
         int a =12;
         int b = 5;
@@ -51,6 +53,18 @@ public class Main {
             }
         }
         System.out.println(result);
+    }
+
+    public static void main(String[] args){
+//      정수 x와 자연수 n을 입력 받아, x부터 시작해 x씩 증가하는 숫자를 n개 지니는 리스트
+        int x = -4;
+        int n = 2;
+        long[] array = new long[n];
+
+        for(int i=0; i<n; i++) {
+            array[i] = (long)x*(i+1);
+        }
+        System.out.println(array[0]);
     }
 
 
