@@ -54,8 +54,7 @@ public class Main {
         }
         System.out.println(result);
     }
-
-    public static void main(String[] args){
+    public static void NO6(String[] args){
 //      정수 x와 자연수 n을 입력 받아, x부터 시작해 x씩 증가하는 숫자를 n개 지니는 리스트
         int x = -4;
         int n = 2;
