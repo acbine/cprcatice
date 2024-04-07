@@ -1,8 +1,6 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalDouble;
+import java.util.*;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 public class Main {
@@ -78,7 +76,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args){
+    public static void NO8(String[] args){
 //      대문자와 소문자가 섞여있는 문자열 s가 주어집니다. s에 'p'의 개수와 'y'의 개수를 비교해 같으면 True, 다르면 False
 //        모두 하나도 없는 경우는 항상 True
         String s="pyY";
@@ -87,7 +85,6 @@ public class Main {
         boolean answer = true;
         String ls=s.toLowerCase();
         String[] split=ls.split(""); // 문자열을 각각의 배열러나누고
-
         for(int i=0; i<split.length; i++){
             if(split[i].equals("p")){
                 pcount=pcount+1;
@@ -96,6 +93,27 @@ public class Main {
             }
         }
         answer=(pcount==ycount) ? true : false;
+    }
+
+    public static void main(String[] args){
+//      자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열
+        long n=12345;
+        String sn = Long.toString(n);
+        String[] array = sn.split(""); // 문자열 5개 존재{1,2,3,4,5}
+////      문제발생 -> 문제 파악을 잘못 -> 역순정렬이 아님  -> 문제 해결
+        int[] intarray = new int[array.length]; //int 배열 만들고
+////        for(int i=0; i< array.length; i++){
+//        Stream stream = Arrays.stream(array).sorted(Comparator.reverseOrder()); //스트림 형태로 변형해서 역순으로 정령
+//        Object[] array1 = stream.toArray();
+//        String[] stringArray = Arrays.stream(array1).map(x->x.toString()).toArray(String[]::new); // 각 객체를 문자열로 변환
+//        System.out.println(stringArray[0]);
+////        IntStream intStream= stream.mapToInt(x->Integer.parseInt(x.toString())); //정렬된 스트림을 long 타입으로 변경
+////        int[] longarray2 = intStream.toArray();
+////        }
+        for(int i=0; i< array.length; i++){ //5-0
+            intarray[i] =  Integer.parseInt(array[array.length-(i+1)]);
+//            [0] = array[0]
+        }
 
 
 
