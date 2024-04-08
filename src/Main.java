@@ -95,7 +95,7 @@ public class Main {
         answer=(pcount==ycount) ? true : false;
     }
 
-    public static void main(String[] args){
+    public static void NO9(String[] args){
 //      자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열
         long n=12345;
         String sn = Long.toString(n);
@@ -114,7 +114,17 @@ public class Main {
             intarray[i] =  Integer.parseInt(array[array.length-(i+1)]);
 //            [0] = array[0]
         }
+    }
 
+    public static void main(String[] args){
+//      n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양의 정수 x의 제곱이 아니라면 -1
+        long n=3;
+        int x = (int) Math.sqrt(n); //
+        if(x * x == n){
+            System.out.println((x + 1) * (x + 1));
+        }else {
+            System.out.println("-1");
+        }
 
 
     }
@@ -122,4 +132,7 @@ public class Main {
 
 
 
-}
+    }
+
+
+
