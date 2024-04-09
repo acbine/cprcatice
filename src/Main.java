@@ -127,7 +127,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args){
+    public static void NO11(String[] args){
 //      양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다.
         int x=10; // x가 몇자리수인지 파악 ->10 100 1000 단위로 나누었을 떄
         int origin = x; // 원본값
@@ -143,6 +143,18 @@ public class Main {
 
 //        boolean a = (x%sum==0) ? true : false ;
 
+    }
+    public static void NO12(String[] args){
+//       seoul의 element중 "Kim"의 위치 x를 찾아, "김서방은 x에 있다"는 String을 반환하는 함수,
+        String[] seoul={"Jane","Kim"};
+        int a=0;
+        for(int i=0; i<seoul.length; i++){
+            if(seoul[i].equals("Kim")){
+                a=i;
+            }
+        }
+
+        String aswer="김서방은"+a+"에 있다.";
     }
 
 
