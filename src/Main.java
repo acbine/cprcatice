@@ -116,7 +116,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args){
+    public static void NO10(String[] args){
 //      n이 양의 정수 x의 제곱이라면 x+1의 제곱을 리턴하고, n이 양의 정수 x의 제곱이 아니라면 -1
         long n=3;
         int x = (int) Math.sqrt(n); //
@@ -125,7 +125,23 @@ public class Main {
         }else {
             System.out.println("-1");
         }
+    }
 
+    public static void main(String[] args){
+//      양의 정수 x가 하샤드 수이려면 x의 자릿수의 합으로 x가 나누어져야 합니다.
+        int x=10; // x가 몇자리수인지 파악 ->10 100 1000 단위로 나누었을 떄
+        int origin = x; // 원본값
+        int sum=0;
+//        System.out.println(123/10);
+        while (x != 0) {
+            sum =sum+ x % 10; // 일의 자리 숫자를 추출하여 합에 더함
+            x=x/10; // 다음 자릿수로 이동
+//            System.out.println(x);
+//            System.out.println(sum);
+        }
+        boolean cc= (origin%sum==0) ? true : false ;
+
+//        boolean a = (x%sum==0) ? true : false ;
 
     }
 
