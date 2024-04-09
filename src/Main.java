@@ -157,6 +157,28 @@ public class Main {
         String aswer="김서방은"+a+"에 있다.";
     }
 
+    public static void main(String[] args){
+//       어떤 정수들이 있습니다. 이 정수들의 절댓값을 차례대로 담은 정수 배열 absolutes와
+//       이 정수들의 부호를 차례대로 담은 불리언 배열 signs가 매개변수로 주어집니다. 실제 정수들의 합
+        int[] absolutes={4,7,12};
+        boolean[] signs={true,false,true};
+        int a=0;
+        int sum =0; // 총합
+
+        for(int i=0; i<absolutes.length; i++){
+            if(signs[i]){
+                a =absolutes[i];
+            }else {
+                a =-absolutes[i];
+            }
+            sum+= a;
+        }
+        System.out.println(sum);
+
+
+
+    }
+
 
 
 
