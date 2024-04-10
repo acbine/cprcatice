@@ -157,7 +157,7 @@ public class Main {
         String aswer="김서방은"+a+"에 있다.";
     }
 
-    public static void main(String[] args){
+    public static void N13(String[] args){
 //       어떤 정수들이 있습니다. 이 정수들의 절댓값을 차례대로 담은 정수 배열 absolutes와
 //       이 정수들의 부호를 차례대로 담은 불리언 배열 signs가 매개변수로 주어집니다. 실제 정수들의 합
         int[] absolutes={4,7,12};
@@ -174,8 +174,20 @@ public class Main {
             sum+= a;
         }
         System.out.println(sum);
+    }
 
-
+    public static void main(String[] args){
+//       n 의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요
+        long n = 118372;
+        String a= Long.toString(n);
+        String[]b =a.split("");
+        long result =0;
+        long[] string = Arrays.stream(b).sorted(Comparator.reverseOrder()).flatMapToLong(x->LongStream.of(Long.parseLong(x))).toArray();
+        for (long num : string) {
+            // 결과에 자리수*10
+            result = result*10 + num;
+        }
+        System.out.println(result);
 
     }
 
